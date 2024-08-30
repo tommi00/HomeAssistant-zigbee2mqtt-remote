@@ -1,5 +1,5 @@
 blueprint:
-  name: Zigbee2MQTT - Tuya 6-Button Scene Switch
+  name: TOMMI Zigbee2MQTT - Tuya 6-Button Scene Switch
   description: Automate your Tuya 6-Button Scene Switch via Zigbee2MQTT.
   domain: automation
   input:
