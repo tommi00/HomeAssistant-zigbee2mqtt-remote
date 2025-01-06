@@ -18,54 +18,54 @@ blueprint:
       default: []
       selector:
         action: {}
-#    button_one_double_press:
-#      name: Double Press - Button 1
-#      description: Action to run on button 1 double press
-#      default: []
-#      selector:
-#        action: {}
-#    button_one_long_press:
-#      name: Long Press - Button 1
-#      description: Action to run on button 1 long press
-#      default: []
-#      selector:
-#        action: {}
+    button_one_double_press:
+      name: Double Press - Button 1
+      description: Action to run on button 1 double press
+      default: []
+      selector:
+        action: {}
+    button_one_long_press:
+      name: Long Press - Button 1
+      description: Action to run on button 1 long press
+      default: []
+      selector:
+        action: {}
     button_two_short_press:
       name: Single Press - Button 2
       description: Action to run on button 2 single press
       default: []
       selector:
         action: {}
-#    button_two_double_press:
-#      name: Double Press - Button 2
-#      description: Action to run on button 2 double press
-#      default: []
-#      selector:
-#        action: {}
-#    button_two_long_press:
-#      name: Long Press - Button 2
-#      description: Action to run on button 2 long press
-#      default: []
-#      selector:
-#        action: {}
+    button_two_double_press:
+      name: Double Press - Button 2
+      description: Action to run on button 2 double press
+      default: []
+      selector:
+        action: {}
+    button_two_long_press:
+      name: Long Press - Button 2
+      description: Action to run on button 2 long press
+      default: []
+      selector:
+        action: {}
     button_three_short_press:
       name: Single Press - Button 3
       description: Action to run on button 3 single press
       default: []
       selector:
         action: {}
-#    button_three_double_press:
-#      name: Double Press - Button 3
-#      description: Action to run on button 3 double press
-#      default: []
-#      selector:
-#        action: {}
-#    button_three_long_press:
-#      name: Long Press - Button 3
-#      description: Action to run on button 3 long press
-#      default: []
-#      selector:
-#        action: {}
+    button_three_double_press:
+      name: Double Press - Button 3
+      description: Action to run on button 3 double press
+      default: []
+      selector:
+        action: {}
+    button_three_long_press:
+      name: Long Press - Button 3
+      description: Action to run on button 3 long press
+      default: []
+      selector:
+        action: {}
 
 mode: single
 trigger:
@@ -84,21 +84,21 @@ action:
   - conditions:
     - '{{ command == ''3_single'' }}'
     sequence: !input button_three_short_press
-#  - conditions:
-#    - '{{ command == ''1_double'' }}'
-#    sequence: !input button_one_double_press
-#  - conditions:
-#    - '{{ command == ''2_double'' }}'
-#    sequence: !input button_two_double_press
-#  - conditions:
-#    - '{{ command == ''3_double'' }}'
-#    sequence: !input button_three_double_press
-#  - conditions:
-#    - '{{ command == ''1_hold'' }}'
-#    sequence: !input button_one_long_press
-#  - conditions:
-#    - '{{ command == ''2_hold'' }}'
-#    sequence: !input button_two_long_press
-#  - conditions:
-#    - '{{ command == ''3_hold'' }}'
-#    sequence: !input button_three_long_press
+  - conditions:
+    - '{{ command == ''1_double'' }}'
+    sequence: !input button_one_double_press
+  - conditions:
+    - '{{ command == ''2_double'' }}'
+    sequence: !input button_two_double_press
+  - conditions:
+    - '{{ command == ''3_double'' }}'
+    sequence: !input button_three_double_press
+  - conditions:
+    - '{{ command == ''1_hold'' }}'
+    sequence: !input button_one_long_press
+  - conditions:
+    - '{{ command == ''2_hold'' }}'
+    sequence: !input button_two_long_press
+  - conditions:
+    - '{{ command == ''3_hold'' }}'
+    sequence: !input button_three_long_press
