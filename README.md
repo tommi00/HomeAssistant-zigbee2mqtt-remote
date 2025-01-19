@@ -27,7 +27,8 @@ Before starting, ensure you have:
 1. **Import the project in HA**:
 - Go to "Settings" -> "Automations" -> Click on "Projects" tab.
 - Click on "Import Project" button.
-- Paste this repository URL (https://github.com/tommi00/HomeAssistant-zigbee2mqtt-remote) and import it.
+- Find on this repository the file you're interested,
+- Copy the URL (for example, 6 buttons remote -> file "6 button" which URL is https://github.com/tommi00/HomeAssistant-zigbee2mqtt-remote/blob/main/6%20button ) and import it.
 2. **Configure it**:
   Now you can you it as an Automation by configuring it: you can select the remote and assign an action to every button when clicked one, two or three times.
 3. **Enjoy it!**:
