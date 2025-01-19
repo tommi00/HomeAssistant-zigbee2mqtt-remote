@@ -1,11 +1,11 @@
 blueprint:
-  name: TOMMI Zigbee2MQTT & HomeAssistant - Tuya 6-Button Scene Switch
-  description: Automate your Tuya 6-Button Scene Switch via Zigbee2MQTT on Home Assistant.
+  name: TOMMI Zigbee2MQTT & HomeAssistant - Tuya 5-Button Scene Switch
+  description: Automate your Tuya 5-Button Scene Switch via Zigbee2MQTT on Home Assistant.
   domain: automation
   input:
     switch:
-      name: Tuya 6-Button Scene Switch
-      description: Tuya 6-Button Scene Switch to use
+      name: Tuya 5-Button Scene Switch
+      description: Tuya 5-Button Scene Switch to use
       selector:
         entity:
           integration: mqtt
@@ -102,24 +102,7 @@ blueprint:
       default: []
       selector:
         action: {}
-    button_six_short_press:
-      name: Single Press - Button 6
-      description: Action to run on button 6 (lower-right) single press
-      default: []
-      selector:
-        action: {}
-    button_six_double_press:
-      name: Double Press - Button 6
-      description: Action to run on button 6 (lower-right) double press
-      default: []
-      selector:
-        action: {}
-    button_six_long_press:
-      name: Long Press - Button 6
-      description: Action to run on button 6 (lower-right) long press
-      default: []
-      selector:
-        action: {}
+
 mode: single
 trigger:
 - platform: state
@@ -144,9 +127,6 @@ action:
     - '{{ command == ''5_single'' }}'
     sequence: !input button_five_short_press
   - conditions:
-    - '{{ command == ''6_single'' }}'
-    sequence: !input button_six_short_press
-  - conditions:
     - '{{ command == ''1_double'' }}'
     sequence: !input button_one_double_press
   - conditions:
@@ -162,9 +142,6 @@ action:
     - '{{ command == ''5_double'' }}'
     sequence: !input button_five_double_press
   - conditions:
-    - '{{ command == ''6_double'' }}'
-    sequence: !input button_six_double_press
-  - conditions:
     - '{{ command == ''1_hold'' }}'
     sequence: !input button_one_long_press
   - conditions:
@@ -179,6 +156,3 @@ action:
   - conditions:
     - '{{ command == ''5_hold'' }}'
     sequence: !input button_five_long_press
-  - conditions:
-    - '{{ command == ''6_hold'' }}'
-    sequence: !input button_six_long_press

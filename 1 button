@@ -1,0 +1,50 @@
+blueprint:
+  name: TOMMI Zigbee2MQTT & HomeAssistant - Tuya 1-Button Scene Switch
+  description: Automate your Tuya 1-Button Scene Switch via Zigbee2MQTT on Home Assistant.
+  domain: automation
+  input:
+    switch:
+      name: Tuya 1-Button Scene Switch
+      description: Tuya 1-Button Scene Switch to use
+      selector:
+        entity:
+          integration: mqtt
+          domain:
+          - sensor
+          multiple: false
+    button_one_short_press:
+      name: Single Press - Button 1
+      description: Action to run on button 1 single press
+      default: []
+      selector:
+        action: {}
+    button_one_double_press:
+      name: Double Press - Button 1
+      description: Action to run on button 1 double press
+      default: []
+      selector:
+        action: {}
+    button_one_long_press:
+      name: Long Press - Button 1
+      description: Action to run on button 1 long press
+      default: []
+      selector:
+        action: {}
+
+mode: single
+trigger:
+- platform: state
+  entity_id: !input switch
+action:
+- variables:
+    command: '{{ trigger.to_state.state }}'
+- choose:
+  - conditions:
+    - '{{ command == ''1_single'' }}'
+    sequence: !input button_one_short_press
+  - conditions:
+    - '{{ command == ''1_double'' }}'
+    sequence: !input button_one_double_press
+  - conditions:
+    - '{{ command == ''1_hold'' }}'
+    sequence: !input button_one_long_press

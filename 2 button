@@ -1,11 +1,11 @@
 blueprint:
-  name: TOMMI Zigbee2MQTT & HomeAssistant - Tuya 3-Button Scene Switch
-  description: Automate your Tuya 3-Button Scene Switch via Zigbee2MQTT on Home Assistant.
+  name: TOMMI Zigbee2MQTT & HomeAssistant - Tuya 2-Button Scene Switch
+  description: Automate your Tuya 2-Button Scene Switch via Zigbee2MQTT on Home Assistant.
   domain: automation
   input:
     switch:
-      name: Tuya 3-Button Scene Switch
-      description: Tuya 3-Button Scene Switch to use
+      name: Tuya 2-Button Scene Switch
+      description: Tuya 2-Button Scene Switch to use
       selector:
         entity:
           integration: mqtt
@@ -48,25 +48,7 @@ blueprint:
       default: []
       selector:
         action: {}
-    button_three_short_press:
-      name: Single Press - Button 3
-      description: Action to run on button 3 single press
-      default: []
-      selector:
-        action: {}
-    button_three_double_press:
-      name: Double Press - Button 3
-      description: Action to run on button 3 double press
-      default: []
-      selector:
-        action: {}
-    button_three_long_press:
-      name: Long Press - Button 3
-      description: Action to run on button 3 long press
-      default: []
-      selector:
-        action: {}
-
+        
 mode: single
 trigger:
 - platform: state
@@ -82,23 +64,14 @@ action:
     - '{{ command == ''2_single'' }}'
     sequence: !input button_two_short_press
   - conditions:
-    - '{{ command == ''3_single'' }}'
-    sequence: !input button_three_short_press
-  - conditions:
     - '{{ command == ''1_double'' }}'
     sequence: !input button_one_double_press
   - conditions:
     - '{{ command == ''2_double'' }}'
     sequence: !input button_two_double_press
   - conditions:
-    - '{{ command == ''3_double'' }}'
-    sequence: !input button_three_double_press
-  - conditions:
     - '{{ command == ''1_hold'' }}'
     sequence: !input button_one_long_press
   - conditions:
     - '{{ command == ''2_hold'' }}'
     sequence: !input button_two_long_press
-  - conditions:
-    - '{{ command == ''3_hold'' }}'
-    sequence: !input button_three_long_press
