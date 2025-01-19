@@ -10,7 +10,7 @@ I suggest using those type of remote by LoraTap, which work really well: [Tuya Z
 
 - 🛠️ **Support for various Zigbee remotes**: Works with devices like the Tuya Zigbee Remote and others.  
 - ⚙️ **Predefined configurations for easy setup**: Simplifies the integration process.  
-- 🌐 **Seamless compatibility with Zigbee2MQTT**: Ideal for smart home setups.  
+- 🌐 **Seamless compatibility with Zigbee2MQTT and Home Assistant**: Ideal for your smart home setups.  
 
 ## Getting Started
 
