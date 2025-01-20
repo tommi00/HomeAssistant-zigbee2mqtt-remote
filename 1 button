@@ -1,5 +1,5 @@
 blueprint:
-  name: TOMMI Zigbee2MQTT & HomeAssistant - Tuya 1-Button Scene Switch
+  name: tommi00 Zigbee2MQTT & HomeAssistant - Tuya 1-Button Scene Switch
   description: Automate your Tuya 1-Button Scene Switch via Zigbee2MQTT on Home Assistant.
   domain: automation
   input:
