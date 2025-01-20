@@ -27,7 +27,7 @@ Before starting, ensure you have:
 1. **Import the project in HA**:
 - Go to "Settings" -> "Automations" -> Click on "Projects" tab.
 - Click on "Import Project" button.
-- Find on this repository the file you're interested,
+- Find on this repository the file you're interested in.
 - Copy the URL (for example, 6 buttons remote -> file "6 button" which URL is https://github.com/tommi00/HomeAssistant-zigbee2mqtt-remote/blob/main/6%20button ).
 - Paste it in Home Assistant and click on the import button.
 2. **Configure it**:
