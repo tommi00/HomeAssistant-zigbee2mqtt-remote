@@ -1,9 +1,11 @@
 # Zigbee2MQTT Remote
 
-A project to integrate Zigbee remotes connected with Zigbee2MQTT on Home Assistant. 
-This repository provides configuration files and scripts to facilitate the use of Zigbee remotes on Home Assistant, by letting you choose what every button does when clicked one, two or three times.
+A project to integrate Zigbee remotes connected with Zigbee2MQTT on Home Assistant through an Automation. 
+This repository provides configuration files and scripts to facilitate the use of Zigbee remotes on Home Assistant through an Automation, by letting you choose what every button does when clicked one, two or three times.
 
 I suggest using those type of remote by LoraTap, which work really well: [Tuya Zigbee Remote](https://s.click.aliexpress.com/e/_o2cAT67).
+
+![Image of the automation](/Screenshot.PNG)
 
 
 ## Features
