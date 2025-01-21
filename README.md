@@ -25,7 +25,6 @@ Before starting, ensure you have:
 - An MQTT broker for communication between ZIgbee2MQTT and Home Assistant.
 
 ### Installation
-#### Manual: 
 1. **Import the project in HA**:
 - Go to "Settings" -> "Automations" -> Click on "Projects" tab.
 - Click on "Import Project" button.
@@ -36,3 +35,4 @@ Before starting, ensure you have:
   Now you can you it as an Automation by configuring it: you can select the remote and assign an action to every button when clicked one, two or three times.
 3. **Enjoy it!**:
   Save and share this project if you liked it!
+  
